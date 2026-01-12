@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gas Cost Estimator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-gray-800 p-6 rounded-xl shadow-lg w-full max-w-md text-white">
+
+    <h1 class="text-2xl font-bold mb-4 text-center">🔐 Random Password Generator</h1>
+
+    <!-- Password Display -->
+    <div class="mb-3">
+      <input id="passwordOutput" type="text" readonly
+        class="w-full p-3 bg-gray-700 rounded-lg outline-none">
+    </div>
+
+    <button id="copyBtn"
+      class="w-full mb-4 bg-blue-600 hover:bg-blue-500 p-2 rounded-lg">
+      Copy to Clipboard
+    </button>
+
+    <!-- Length -->
+    <label class="block font-semibold mt-2">Password Length:
+      <span id="lengthValue" class="text-yellow-400">12</span>
+    </label>
+
+    <input id="lengthSlider" type="range" min="8" max="32" value="12"
+      class="w-full mb-4">
+
+    <!-- Options -->
+    <div class="space-y-2">
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="uppercase" checked>
+        Include Uppercase Letters
+      </label>
+
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="numbers" checked>
+        Include Numbers
+      </label>
+
+      <label class="flex items-center gap-2">
+        <input type="checkbox" id="symbols" checked>
+        Include Symbols
+      </label>
+    </div>
+
+    <!-- Strength -->
+    <p class="mt-4 font-semibold">Strength:
+      <span id="strengthText" class="text-green-400">Strong</span>
+    </p>
+
+    <!-- Generate Button -->
+    <button id="generateBtn"
+      class="w-full mt-4 bg-green-600 hover:bg-green-500 p-2 rounded-lg font-semibold">
+      Generate Password
+    </button>
+    <script src="gas.js"></script>
+</body>
+</html>

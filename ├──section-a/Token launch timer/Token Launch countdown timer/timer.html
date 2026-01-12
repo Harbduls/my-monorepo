@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Token Launch Countdown</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen flex items-center justify-center">
+
+  <div class="text-center space-y-6">
+
+    <h1 class="text-4xl font-bold">🚀 Token Launch Countdown</h1>
+
+    <!-- Date Picker -->
+    <div>
+      <p class="mb-2 text-lg">Choose Launch Date:</p>
+      <input id="dateInput" type="datetime-local" class="text-black px-3 py-2 rounded">
+    </div>
+
+    <!-- Countdown Display -->
+    <div id="countdown" class="text-3xl font-semibold">
+      Set a date to start the countdown ⏳
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="w-96 h-3 bg-gray-700 rounded-full mx-auto">
+      <div id="progress" class="h-3 bg-green-400 rounded-full" style="width: 0%"></div>
+    </div>
+
+    <!-- Subscribe Area -->
+    <div class="space-x-2">
+      <input id="emailInput" type="email" placeholder="Enter email"
+             class="text-black px-3 py-2 rounded">
+      <button id="subscribeBtn" class="bg-blue-500 px-4 py-2 rounded">
+        Subscribe
+      </button>
+    </div>
+
+  </div>
+
+  <script src="timer.js"></script>
+</body>
+</html>
